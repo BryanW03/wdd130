@@ -1,7 +1,7 @@
 :root {
   --primary-color: #95D9C3;
-  --secunday-color: #79F6AD;
-  --accent1-color: #5CFFEF;
+  --secondary-color: #79F6AD;
+  --accent1-color: hsl(196.2, 100%, 30%); /* Ajustado para mejorar contraste */
   --accent2-color: #C6D2CE;
 }
 
@@ -14,16 +14,16 @@ body {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
   background-image: linear-gradient(to bottom, #2E4053, #3E8E41);
+  color: #fff; /* Asegura que el texto tenga buen contraste */
 }
 
 header {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-gap: 20px;
-  /* Reduce el gap */
   align-items: center;
   padding: 10px;
-  background-color: rgba(14, 1, 1, 0.32);
+  background-color: rgba(14, 1, 1, 0.5); /* Aumentado la opacidad */
 }
 
 .menu {
@@ -39,26 +39,18 @@ header {
   margin: 5px;
   border-radius: 10px;
   background-color: #5CFFEF;
+  color: #333; /* Asegura buen contraste */
 }
 
-/* Estilo para el h1 debajo del menu */
 header h1 {
   color: var(--accent1-color);
-  /* Utiliza el color de acento 1 */
   font-size: 3rem;
-  /* Tamaño de fuente */
   text-align: center;
-  /* Centra el texto */
   padding: 20px;
-  /* Agrega un poco de espacio alrededor */
-  background-color: rgba(0, 0, 0, 0.2);
-  /* Fondo semitransparente */
+  background-color: rgba(0, 0, 0, 0.4); /* Aumentado la opacidad */
   border-radius: 10px;
-  /* Redondea las esquinas */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  /* Sombra para dar profundidad */
   margin-top: 20px;
-  /* Espacio entre el menú y el h1 */
 }
 
 footer {
@@ -95,31 +87,21 @@ footer {
 .sociallinks img {
   width: 30px;
   height: 30px;
-
 }
 
 .sociallinks a:hover img {
   filter: invert(0);
 }
 
-/* Trips Section */
 .trips-overview h2 {
   color: var(--accent1-color);
-  /* Utiliza el color de acento 1 */
   font-size: 3rem;
-  /* Tamaño de fuente */
   text-align: center;
-  /* Centra el texto */
   padding: 20px;
-  /* Agrega un poco de espacio alrededor */
-  background-color: rgba(0, 0, 0, 0.2);
-  /* Fondo semitransparente */
+  background-color: rgba(0, 0, 0, 0.4); /* Aumentado la opacidad */
   border-radius: 10px;
-  /* Redondea las esquinas */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  /* Sombra para dar profundidad */
   margin-top: 20px;
-  /* Espacio entre el menú y el h1 */
 }
 
 .trips-grid {
@@ -131,31 +113,23 @@ footer {
 .trip-card {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  /* Divide el contenedor en dos columnas iguales */
   grid-gap: 5px;
-  /* Agrega un espacio de 20px entre las imágenes */
   padding: 50px;
-  /* Agrega un espacio interno al contenedor */
   color: var(--accent1-color);
-
 }
 
 .trip-card img {
   width: 100%;
   height: 200px;
-  /* Ajusta la altura según tus necesidades */
   object-fit: cover;
-  /* Asegura que las imágenes mantengan su proporción */
   display: flex;
   align-items: center;
 }
 
 .trip-card h3 {
   margin-top: 0;
-
 }
 
-/* Popup Styles */
 .popup {
   position: fixed;
   top: 0;
@@ -200,7 +174,7 @@ footer {
 }
 
 .popup-content .submit-button {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4); /* Aumentado la opacidad */
   color: var(--accent1-color);
   border: none;
   padding: 10px 20px;
@@ -232,73 +206,51 @@ footer {
   margin-left: 5px;
 }
 
-/* Trip Summary Table */
 .trip-table {
   width: 100%;
   border-collapse: collapse;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  /* Sombra para dar profundidad */
 }
 
 .trip-table-section h3 {
   color: var(--accent1-color);
-  /* Utiliza el color de acento 1 */
   font-size: 3rem;
-  /* Tamaño de fuente */
   text-align: center;
-  /* Centra el texto */
   padding: 20px;
-  /* Agrega un poco de espacio alrededor */
-  background-color: rgba(0, 0, 0, 0.2);
-  /* Fondo semitransparente */
+  background-color: rgba(0, 0, 0, 0.4); /* Aumentado la opacidad */
   border-radius: 10px;
-  /* Redondea las esquinas */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  /* Sombra para dar profundidad */
   margin-top: 20px;
-  /* Espacio entre el menú y el h1 */
 }
 
 .trip-table th,
 .trip-table td {
   border: none;
-  /* Elimina los bordes para un diseño más limpio */
   padding: 15px;
-  /* Aumenta el padding para más espacio */
   text-align: left;
 }
 
 .trip-table th {
   background: linear-gradient(to bottom, #3498db, #2ecc71);
-  /* Fondo degradado */
   color: white;
-  /* Color del texto */
   font-weight: bold;
-  /* Negrita para los encabezados */
 }
 
 .trip-table td {
   background-color: #f9f9f9;
-  /* Fondo claro para las celdas */
   color: black;
 }
 
-/* Fondo degradado para el contenedor de la tabla */
 .trip-table-container {
   background: linear-gradient(to bottom, #66ccff, #ccffcc);
-  /* Fondo degradado */
   padding: 20px;
-  /* Espacio alrededor de la tabla */
   border-radius: 10px;
-  /* Redondea las esquinas */
 }
 
-
-/* Call to Action Button */
 .cta-button {
   display: flex;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4); /* Aumentado la opacidad */
   color: var(--accent1-color);
   padding: 10px 20px;
   text-decoration: none;
@@ -310,10 +262,9 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Estilos para el Modal de Confirmación */
 .confirmation-content {
   text-align: center;
-  background-image: linear-gradient(to bottom, #2E4053, #3E8E41)
+  background-image: linear-gradient(to bottom, #2E4053, #3E8E41);
 }
 
 .check-mark {
@@ -341,7 +292,6 @@ footer {
   }
 }
 
-/* Scroll Animation */
 .appear {
   opacity: 0;
   transform: translateY(20px);
