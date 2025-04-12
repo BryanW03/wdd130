@@ -268,6 +268,7 @@ border-radius: 100%; /* Opcional: redondea las esquinas */
 .contact-form form {
 display: flex;
 flex-direction: column;
+color: var(--accent2-color);
 }
 
 .contact-form form label {
@@ -282,8 +283,32 @@ margin-top: 5px;
 
 /* Submit Button */
 button {
-background-color: #007BFF;
-color: white;
+background-color: rgba(0, 0, 0, 0.2);
+color: var(--accent1-color);
 border: none;
 padding: 10px 15px;
+}
+
+/* Scroll Animation */
+.appear {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .appear.visible {
+  opacity: 1;
+  transform: translateY(0);
+  }
+
+  /* Scroll Animation */
+.appear {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.appear.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

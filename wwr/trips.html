@@ -1,200 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trips - Down The River</title>
-    <meta name="description" content="Get in touch with us today! Contact our team for inquiries, feedback, or support. We're here to help.">
-    <meta name="author" content="Brayan De Leon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trips - Down The River</title>
+  <meta name="description" content="Get in touch with us today! Contact our team for inquiries, feedback, or support. We're here to help.">
+  <meta name="author" content="Brayan De Leon">
 
-    <link rel="stylesheet" href="styles/trips.css">
+  <link rel="stylesheet" href="styles/trips.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Limelight&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Limelight&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <img src="images/logo.webp" alt="logo-del-sitio-rafting">
-        <nav class="menu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <h1>Trips</h1>
-    </header>
-    <main>
-        <!-- Trips Section -->
-        <section class="trips-overview">
-            <h2>Discover Our Exciting Trips</h2>
-    
-            <!-- Trip Details -->
-            <div class="trips-grid">
-                <!-- Trip 1 -->
-                <div class="trip-card">
-                    <img src="images/trip1.webp" alt="Trip 1 image">
-                    <h3>Beginner Rapids Adventure</h3>
-                    <p>A perfect trip for first-time rafters. Enjoy calm waters and scenic views.</p>
-                </div>
-    
-                <!-- Trip 2 -->
-                <div class="trip-card">
-                    <img src="images/trip2.webp" alt="Trip 2 image">
-                    <h3>Intermediate Rapids Challenge</h3>
-                    <p>Take your rafting skills to the next level with medium difficulty rapids.</p>
-                </div>
-    
-                <!-- Trip 3 -->
-                <div class="trip-card">
-                    <img src="images/trip3.webp" alt="Trip 3 image">
-                    <h3>Advanced Rapids Expedition</h3>
-                    <p>For experienced rafters seeking adrenaline-pumping adventures.</p>
-                </div>
-            </div>
-    
-            <!-- Botón para abrir el popup -->
-            <button class="cta-button" onclick="openPopup()">Book Your Trip Now!</button>
-        </section>
-    
-        <!-- Trip Summary Table -->
-        <section class="trip-table-section">
-            <h3>Compare Our Trips</h3>
-            <table class="trip-table">
-                <thead>
-                    <tr>
-                        <th>Trip Name</th>
-                        <th>Difficulty Level</th>
-                        <th>Duration</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Beginner Rapids Adventure</td>
-                        <td>Easy</td>
-                        <td>2 Hours</td>
-                        <td>$50</td>
-                    </tr>
-                    <tr>
-                        <td>Intermediate Rapids Challenge</td>
-                        <td>Medium</td>
-                        <td>4 Hours</td>
-                        <td>$100</td>
-                    </tr>
-                    <tr>
-                        <td>Advanced Rapids Expedition</td>
-                        <td>Difficult</td>
-                        <td>6 Hours</td>
-                        <td>$150</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    
-        <!-- Call to Action Button -->
-        <a href="contact.html" class="cta-button">Contact Us for More Details!</a>
-    
-        <!-- Contenido del popup -->
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <h3>Book Your Trip</h3>
-                <form id="bookingForm">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-    
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" required>
-    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-    
-                    <label for="package">Select Package:</label>
-                    <select id="package" name="package" required>
-                        <option value="">Select a package</option>
-                        <option value="Beginner Rapids Adventure">Beginner Rapids Adventure</option>
-                        <option value="Intermediate Rapids Challenge">Intermediate Rapids Challenge</option>
-                        <option value="Advanced Rapids Expedition">Advanced Rapids Expedition</option>
-                    </select>
-    
-                    <label for="people">Number of People:</label>
-                    <input type="number" id="people" name="people" min="1" required>
-    
-                    <label for="children">Are there children in the group?</label>
-                    <input type="checkbox" id="children" name="children">
-                    <label for="children" class="checkbox-label">Yes</label>
-    
-                    <button type="submit" class="submit-button">Submit Booking</button>
-                </form>
-                <button class="close-popup" onclick="closePopup()">Close</button>
-            </div>
+  <header>
+    <img src="images/logo.webp" alt="logo-del-sitio-rafting">
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <h1>Trips</h1>
+  </header>
+  <main>
+    <!-- Trips Section -->
+    <section class="trips-overview appear">
+      <h2>Discover Our Exciting Trips</h2>
+
+      <!-- Trip Details -->
+      <div class="trips-grid">
+        <!-- Trip 1 -->
+        <div class="trip-card">
+          <img src="images/trip1.webp" alt="Trip 1 image">
+          <h3>Beginner Rapids Adventure</h3>
+          <p>A perfect trip for first-time rafters. Enjoy calm waters and scenic views.</p>
         </div>
 
-        <!-- Modal de Confirmación -->
-        <div id="confirmation-modal" class="popup">
-          <div class="popup-content confirmation-content">
-            <div class="check-mark">
-              <svg viewBox="0 0 24 24">
-                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" />
-              </svg>
-            </div>
-            <h3>Reserva Confirmada</h3>
-            <p>Gracias, <span id="user-name"></span>, por reservar con nosotros.</p>
-            <p>Se ha enviado un correo electrónico con la confirmación y el enlace de pago a tu dirección de correo electrónico.</p>
-            <button class="close-popup" onclick="closeConfirmationModal()">Cerrar</button>
-          </div>
+        <!-- Trip 2 -->
+        <div class="trip-card">
+          <img src="images/trip2.webp" alt="Trip 2 image">
+          <h3>Intermediate Rapids Challenge</h3>
+          <p>Take your rafting skills to the next level with medium difficulty rapids.</p>
         </div>
 
-    </main>
+        <!-- Trip 3 -->
+        <div class="trip-card">
+          <img src="images/trip3.webp" alt="Trip 3 image">
+          <h3>Advanced Rapids Expedition</h3>
+          <p>For experienced rafters seeking adrenaline-pumping adventures.</p>
+        </div>
+      </div>
 
-    <script>
+      <!-- Botón para abrir el popup -->
+      <button class="cta-button" onclick="openPopup()">Book Your Trip Now!</button>
+    </section>
+
+    <!-- Trip Summary Table -->
+    <section class="trip-table-section appear">
+      <h3>Compare Our Trips</h3>
+      <table class="trip-table">
+        <thead>
+          <tr>
+            <th>Trip Name</th>
+            <th>Difficulty Level</th>
+            <th>Duration</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Beginner Rapids Adventure</td>
+            <td>Easy</td>
+            <td>2 Hours</td>
+            <td>$50</td>
+          </tr>
+          <tr>
+            <td>Intermediate Rapids Challenge</td>
+            <td>Medium</td>
+            <td>4 Hours</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>Advanced Rapids Expedition</td>
+            <td>Difficult</td>
+            <td>6 Hours</td>
+            <td>$150</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Call to Action Button -->
+    <a href="contact.html" class="cta-button appear">Contact Us for More Details!</a>
+
+    <!-- Contenido del popup -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <h3>Book Your Trip</h3>
+        <form id="bookingForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="package">Select Package:</label>
+          <select id="package" name="package" required>
+            <option value="">Select a package</option>
+            <option value="Beginner Rapids Adventure">Beginner Rapids Adventure</option>
+            <option value="Intermediate Rapids Challenge">Intermediate Rapids Challenge</option>
+            <option value="Advanced Rapids Expedition">Advanced Rapids Expedition</option>
+          </select>
+
+          <label for="people">Number of People:</label>
+          <input type="number" id="people" name="people" min="1" required>
+
+          <label for="children">Are there children in the group?</label>
+          <input type="checkbox" id="children" name="children">
+          <label for="children" class="checkbox-label">Yes</label>
+
+          <button type="submit" class="submit-button">Submit Booking</button>
+        </form>
+        <button class="close-popup" onclick="closePopup()">Close</button>
+      </div>
+    </div>...
+    <!-- Modal de Confirmación -->
+    <div id="confirmation-modal" class="popup">
+      <div class="popup-content confirmation-content">
+        <div class="check-mark">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" />
+          </svg>
+        </div>
+        <h3>Reserva Confirmada</h3>
+        <p>Gracias, <span id="user-name"></span>, por reservar con nosotros.</p>
+        <p>Se ha enviado un correo electrónico con la confirmación y el enlace de pago a tu dirección de correo electrónico.</p>
+        <button class="close-popup" onclick="closeConfirmationModal()">Cerrar</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
     function openPopup() {
-        document.getElementById("popup").style.display = "block";
+      document.getElementById("popup").style.display = "block";
     }
-    
+
     function closePopup() {
-        document.getElementById("popup").style.display = "none";
+      document.getElementById("popup").style.display = "none";
     }
 
     function closeConfirmationModal() {
-        document.getElementById("confirmation-modal").style.display = "none";
+      document.getElementById("confirmation-modal").style.display = "none";
     }
 
     // Manejo del formulario de reserva
     document.getElementById("bookingForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Evita que el formulario se envíe por defecto
+      event.preventDefault(); // Evita que el formulario se envíe por defecto
 
-        // Obtén los valores del formulario
-        var name = document.getElementById("name").value;
-        var phone = document.getElementById("phone").value;
-        var email = document.getElementById("email").value;
-        var packageSelected = document.getElementById("package").value;
-        var people = document.getElementById("people").value;
-        var children = document.getElementById("children").checked;
+      // Obtén los valores del formulario
+      var name = document.getElementById("name").value;
+      var phone = document.getElementById("phone").value;
+      var email = document.getElementById("email").value;
+      var packageSelected = document.getElementById("package").value;
+      var people = document.getElementById("people").value;
+      var children = document.getElementById("children").checked;
 
-        // Muestra el modal de confirmación
-        document.getElementById('confirmation-modal').style.display = 'block';
-        document.getElementById('user-name').innerText = name;
+      // Muestra el modal de confirmación
+      document.getElementById('confirmation-modal').style.display = 'block';
+      document.getElementById('user-name').innerText = name;
 
-        // Cierra el popup después de enviar el formulario
-        closePopup();
+      // Cierra el popup después de enviar el formulario
+      closePopup();
     });
-    </script>
-        
-    <footer>
-        <p class="f-color">2025 Down The River Brayan De Leon</p>
-        <nav class="sociallinks">
-            <a href="https://www.facebook.com/" class="icon">
-                <img src="images/facebook.png" alt="facebook">
-            </a>
-            <a href="https://www.instagram.com/" class="icon">
-                <img src="images/instagram.png" alt="instagram">
-            </a>
-            <a href="https://www.youtube.com/" class="icon">
-                <img src="images/youtube.png" alt="youtube">
-            </a>
-        </nav>
-        <p>View the <a href="https://wireframe.cc/uo9Eyx">wireframe document</a> here.</p>
-    </footer>
+
+    // Scroll Animation
+    function showElements() {
+      const elements = document.querySelectorAll('.appear');
+      elements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          element.classList.add('visible');
+        } else {
+          element.classList.remove('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', showElements);
+    document.addEventListener('DOMContentLoaded', showElements);
+  </script>
+
+  <footer>
+    <p class="f-color">2025 Down The River Brayan De Leon</p>
+    <nav class="sociallinks">
+      <a href="https://www.facebook.com/" class="icon">
+        <img src="images/facebook.png" alt="facebook">
+      </a>
+      <a href="https://www.instagram.com/" class="icon">
+        <img src="images/instagram.png" alt="instagram">
+      </a>
+      <a href="https://www.youtube.com/" class="icon">
+        <img src="images/youtube.png" alt="youtube">
+      </a>
+    </nav>
+    <p>View the <a href="https://wireframe.cc/uo9Eyx">wireframe document</a> here.</p>
+  </footer>
 </body>
+
 </html>

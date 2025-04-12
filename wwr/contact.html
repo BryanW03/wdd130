@@ -25,7 +25,7 @@
         <h1>Contact Us</h1>
     </header>
     <main>  
-        <section class="company-info">
+        <section class="company-info appear">
             <h2>Contact Information</h2>
             <p><strong>Address:</strong> 123 River Road, Adventure City, AC 12345</p>
             <p><strong>Phone:</strong> (123) 456-7890</p>
@@ -43,7 +43,7 @@
         </section>
 
         <!-- Employee Profiles -->
-        <section class="employee-profiles">
+        <section class="employee-profiles appear">
             <h2>Meet Our Team</h2>
             <div class="profiles">
                 <div class="profile">
@@ -62,7 +62,7 @@
         </section>
 
         <!-- Contact Form -->
-        <section class="contact-form">
+        <section class="contact-form appear">
             <h2>Get in Touch</h2>
             <form action="#" method="POST">
                 <!-- User's Name -->
@@ -101,7 +101,7 @@
             </form>
         </section>
     </main>
-    <footer>
+    <footer class="appear">
         <p class="f-color">2025 Down The River Brayan De Leon</p>
         <nav class="sociallinks">
             <a href="https://www.facebook.com/" class="icon">
@@ -116,5 +116,24 @@
         </nav>
         <p>View the <a href="https://wireframe.cc/uo9Eyx">wireframe document</a> here.</p>
     </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        function showElements() {
+          const elements = document.querySelectorAll('.appear');
+          elements.forEach(element => {
+              const rect = element.getBoundingClientRect();
+              if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                  element.classList.add('visible');
+              } else {
+                  element.classList.remove('visible');
+              }
+          });
+        }
+
+        window.addEventListener('scroll', showElements);
+        document.addEventListener('DOMContentLoaded', showElements);
+    </script>
+
 </body>
 </html>

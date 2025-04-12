@@ -26,7 +26,7 @@
     </header>
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero appear">
             <img src="images/home.webp" alt="White water rafting adventure" class="hero-image">
             <div class="hero-text">
                 <h2 class="title-large">Experience the Thrill of White Water Rafting</h2>
@@ -36,21 +36,10 @@
         </section>
     
         <!-- Newsletter Signup Section -->
-        <section class="newsletter">
-            <h3 class="title-medium">Stay Updated</h3>
-            <form action="#" method="POST" class="newsletter-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <button type="submit" class="signup-button">Sign Up Now</button>
-            </form>
-        </section>
+        
     
         <!-- Company Purpose and Offerings Section -->
-        <section class="about-company">
+        <section class="about-company appear">
             <h3 class="title-medium">Why Choose Down The River?</h3>
             <div class="grid-layout">
                 <div class="grid-item">
@@ -63,8 +52,45 @@
                 </div>
             </div>
         </section>
+
+        <section class="newsletter appear">
+            <h3 class="title-medium">Stay Updated</h3>
+            <form action="#" method="POST" class="newsletter-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <button type="submit" class="signup-button">Sign Up Now</button>
+            </form>
+        </section>
         
     </main>
+
+    <script>
+        function showElements() {
+          const elements = document.querySelectorAll('.appear'); // Select all elements with class .appear
+
+          // Set threshold to show elements (e.g., when they are 200px from the viewport)
+          const threshold = 200;
+
+          elements.forEach((element) => {
+            const distanceToTop = element.getBoundingClientRect().top;
+            if (distanceToTop <= window.innerHeight + window.scrollY - threshold) {
+              element.classList.add('visible'); // Add visible class to show the element
+            } else {
+              element.classList.remove('visible'); // Remove visible class if condition is not met
+            }
+          });
+        }
+
+        // Add scroll event to call the function
+        window.addEventListener('scroll', showElements);
+
+        // Initialize the function when the page loads
+        showElements();
+    </script>
     
     <footer>
         <p class="f-color">2025 Down The River Brayan De Leon</p>
