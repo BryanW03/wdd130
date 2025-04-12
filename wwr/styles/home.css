@@ -1,0 +1,201 @@
+:root{
+  --primary-color: #95D9C3;
+  --secunday-color: #79F6AD;
+  --accent1-color:  #5CFFEF;
+  --accent2-color:  #C6D2CE;
+}
+
+html{
+  max-width: 1400px;
+  margin: auto;
+}
+
+body {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  background-image: linear-gradient(to bottom, #2E4053, #3E8E41);
+}
+
+header {
+display: grid;
+grid-template-columns: 1fr 3fr;
+grid-gap: 20px; /* Reduce el gap */
+align-items: center;
+padding: 10px;
+background-color: rgba(14, 1, 1, 0.32);
+}
+
+.menu{
+display: flex;
+justify-content: space-between;
+font-family: "Limelight", sans-serif;
+font-weight: 400;
+}
+
+.menu > * {
+border: 1px solid #ccc; 
+padding: 25px; 
+margin: 5px; 
+border-radius: 10px; 
+background-color: #5CFFEF;
+}
+
+/* Estilo para el h1 debajo del menu */
+header h1 {
+  color: var(--accent1-color); /* Utiliza el color de acento 1 */
+  font-size: 3rem; /* Tamaño de fuente */
+  text-align: center; /* Centra el texto */
+  padding: 20px; /* Agrega un poco de espacio alrededor */
+  background-color: rgba(0, 0, 0, 0.2); /* Fondo semitransparente */
+  border-radius: 10px; /* Redondea las esquinas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  margin-top: 20px; /* Espacio entre el menú y el h1 */
+}
+
+
+
+footer {
+display: flex;
+justify-content: space-between; 
+align-items: center; 
+background-color: #333; 
+color: #fff; 
+padding: 20px; 
+border-top: 1px solid #444; 
+}
+
+.f-color {
+text-align: center; 
+flex: 1; 
+font-size: 16px; 
+font-family: Arial, sans-serif; 
+}
+
+.sociallinks {
+display: flex; 
+justify-content: flex-end; 
+}
+
+.sociallinks a {
+margin-left: 10px; 
+transition: transform 0.3s ease; 
+}
+
+.sociallinks a:hover {
+transform: scale(1.1); 
+}
+
+.sociallinks img {
+width: 30px; 
+height: 30px; 
+
+}
+
+.sociallinks a:hover img {
+filter: invert(0); 
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero {
+  background-color: #007bff;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.hero-text {
+  padding: 20px;
+}
+
+.title-large {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cta-button {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #ff99cc;
+  transform: scale(1.05);
+}
+
+.newsletter {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra moderna */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+}
+
+.title-medium {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-form label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none; /* Sin bordes */
+  background-color: rgba(255,255,255,0.7); /* Fondo semi-transparente */
+  box-shadow: inset 0 -2px rgba(0,0,0,0.1);
+}
+
+.signup-button {
+  background-color: #007bff; 
+  color: white; 
+  padding: 12px; 
+  border-radius: 8px; 
+  border: none; 
+  cursor:pointer; 
+  transition: all 0.3s ease-in-out; 
+}
+
+.signup-button:hover {
+  transform: scale(0.95);
+  background-color: #0099ff;
+}
