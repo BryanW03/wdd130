@@ -10,8 +10,8 @@ html{
   margin: auto;
 }
 
-body {
-  font-family: "Limelight", sans-serif;
+body{
+  font-family: "Roboto Slab", serif;
   font-weight: 400;
   background-image: linear-gradient(to bottom, #2E4053, #3E8E41);
 }
@@ -239,6 +239,7 @@ main {
   padding: 10px; /* Agrega un poco de espacio entre el borde y el contenido */
   border-radius: 50px; /* Redondea las esquinas del borde */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra difuminada */
+  color: var(--accent1-color);
 
 }
 
